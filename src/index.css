@@ -1,0 +1,86 @@
+/* General table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table borders */
+table, th, td {
+  border: 1px solid #e0e0e0;
+}
+
+/* Table header styling */
+thead {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+thead th {
+  padding: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #ffe1ff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff7e0;
+}
+
+/* Row hover effect */
+tbody tr:hover {
+  background-color: #ffd6a5;
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
+}
+
+/* Table cells */
+td {
+  padding: 12px;
+  color: #333;
+}
+
+/* Add subtle shadow and effect on table rows */
+tbody tr {
+  transition: 0.2s ease-in-out;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+  }
+}
